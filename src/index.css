@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  font-family: "Outfit", sans-serif;
+}
+
+.drop_down_menu .drop_links {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.drop_down_menu:hover .drop_links {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.color-img {
+  background-image: url(/src/assets/img/bg__img3.png);
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  position: absolute;
+  top: -211px;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid #eee; */
+  border-radius: 50%;
+}
+.color-two-img {
+  background-image: url(/src/assets/img/bg__img3.png);
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  position: absolute;
+  top: -211px;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid #eee; */
+  border-radius: 50%;
+}
+@layer components {
+  .business-icons {
+    @apply opacity-40 brightness-100 contrast-100 saturate-0 blur-0 hue-rotate-0 transition-opacity duration-1000 hover:opacity-100;
+  }
+  .btn-nav {
+    @apply shadow-boxShadowCustom bg-bottom-gradient rounded-[30px] tracking-widest w-[170px] p-[10px] text-[12px] flex items-center justify-center bg-transparent hover:bg-hover-gradient hover:shadow-hoverShadowCustom hover:border-border_hover_Color hover:border-hidden hover:border-transparent sm:hidden font-bold;
+  }
+  .btn-hero {
+    @apply border border-borderFirst_Color  rounded-[30px] tracking-widest w-[170px] p-[10px] text-[12px] flex items-center justify-center hover:border-hidden hover:border-transparent sm:hidden font-bold;
+  }
+  .img-men {
+    @apply w-full  object-cover object-center opacity-40 transition-opacity duration-1000 rounded-[10px] filter brightness-100 contrast-100 saturate-100 blur-0 hue-rotate-0 hover:opacity-100;
+  }
+}
+
+.computer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/img/computer.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.s {
+  background-image: url(./assets/img/bg_pattern.png);
+  background-size: 50px auto;
+}
+
+.overlay {
+  transition: 0.6s;
+}
+
+.blow_background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/img/digital.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+}
+
+.slick-slide-wrapper {
+  padding: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+/* Dots */
+.slick-dots li button:before {
+  color: #9b96b0;
+  opacity: #9b96b0;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff7fc2;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+@media (max-width: 992px) {
+  .screens {
+    display: none;
+  }
+}
